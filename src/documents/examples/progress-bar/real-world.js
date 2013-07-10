@@ -6,12 +6,12 @@ AUI().ready(
   function(A) {
     var content = A.one('.content');
     var progressBar, steptask, step, speed, statusBar;
-    var loadBut = A.one('.load'); //load button
-    var resetBut = A.one('.reset'); //destroy button
+    var loadBut = A.one('.load'); // Load button
+    var resetBut = A.one('.reset'); // Reset button
 
     function pbCreate() {
       step = 0;
-      //create progressbar
+      // Create progress bar
       progressBar = new A.ProgressBar(
         {
           contentBox: '.pbar',
@@ -19,20 +19,20 @@ AUI().ready(
           on: {
             complete: function(e) {
               this.set('label', 'Complete!');
-              content.load('assets/content.html');
+              content.load('../../progress-bar/content.html');
               statusBar.addClass('complete');
             }
           },
           value: step
         }
       ).render();
-      //get statusbar for candystriping
+      // Get status bar for candystriping
       statusBar = A.one('.aui-progress-bar-status');
       statusBar.append('<span/>');
 
       speed = A.one('input').get('value');
 
-     //create progress
+     // Create progress
       steptask = new A.AsyncQueue(
         {
           fn: function() {
@@ -45,7 +45,7 @@ AUI().ready(
         }
       );
 
-      //assign load handler
+      // Assign load handler
       loadBut.on(
         'click',
         function() {
@@ -61,7 +61,7 @@ AUI().ready(
       content.set('innerHTML', '');
     }
 
-    //assign handlers
+    // Assign handlers
     resetBut.on(
       'click', function() {
         pbDestroy();
@@ -69,7 +69,7 @@ AUI().ready(
       }
     );
 
-    //onload
+    // On load
     pbCreate();
   }
 );

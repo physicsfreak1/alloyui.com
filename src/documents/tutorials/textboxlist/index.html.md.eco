@@ -8,10 +8,11 @@ description: Displays users' choices to them as a graphic list.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Textbox List module.
@@ -35,7 +36,7 @@ Create an HTML element:
 <div id="myList"></div>
 ```
 
-Now create a new instance of Textbox List component, then tell `contentBox` where it's going to be attached and populate some suggestions by adding a simple JavaScript array to `dataSource`. Finally, let's render it!
+Now create a new instance of the Textbox List component, then tell `contentBox` where it's going to be attached and populate some suggestions by adding a JavaScript array-of-arrays to `dataSource`. Finally, let's render it!
 
 ``` javascript
 AUI().use(
@@ -44,7 +45,11 @@ AUI().use(
     var textboxlist = new A.TextboxList(
       {
         contentBox: '#myList',
-        dataSource: ['America', 'Europe', 'Asia']
+        dataSource: [
+          ['America'],
+          ['Europe'],
+          ['Asia']
+        ]
       }
     ).render();
   }
@@ -71,7 +76,11 @@ AUI().use(
     var textboxlist = new A.TextboxList(
       {
         contentBox: '#myList',
-        dataSource: ['America', 'Europe', 'Asia'],
+        dataSource: [
+          ['America'],
+          ['Europe'],
+          ['Asia']
+        ],
         typeAhead: true
       }
     ).render();
@@ -93,7 +102,7 @@ AUI().use(
   function(A) {
     var textboxlist = new A.TextboxList(
       {
-        contentBox: '#myList'
+        contentBox: '#myList',
         dataSource: states,
         matchKey: 'name',
         schema: {

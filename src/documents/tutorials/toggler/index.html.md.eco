@@ -8,10 +8,11 @@ description: Allows users to toggle content on and off.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Toggler module.
@@ -42,7 +43,7 @@ Create a HTML element with some content to toggle on/off:
   <strong>Note:</strong> the `aui-toggler` classes are optional, and tell AUI to place the content in `collapsed` state on load.<br>
 </div>
 
-Now create a new instance of Toggler component, then pass it the `container` where it's going to be attached and `header` and `content` where we placed our header and content html. Finally, let's render it!
+Now create a new instance of the Toggler component, then pass it the `container` where it's going to be attached and `header` and `content` where we placed our header and content html. Finally, let's render it!
 
 ``` javascript
 AUI().use(

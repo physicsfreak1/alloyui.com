@@ -5,7 +5,13 @@ AUI().use(
     var lastJobNumber = 1;
     var newJobNumber = 2;
     var job = '<div class="job added"></div>';
-    var jobContent = '<h5>Previous job: </h5><label for="position2">Position: </label><input type="text" id="position2"><br><label for="employer2">Employer: </label><input type="text" id="employer2"><br><label for="dateRange">Dates of Employment: </label><input type="text" id="dateRange"><br>';
+    var jobContent = '<h5>Previous job: </h5>' +
+      '<label for="position2">Position: </label>' +
+      '<input type="text" id="position2"><br>' +
+      '<label for="employer2">Employer: </label>' +
+      '<input type="text" id="employer2"><br>' +
+      '<label for="dateRange">Dates of Employment: </label>' +
+      '<input type="text" id="dateRange"><br>';
 
     A.one('#addJob').on(
       'click',
@@ -30,6 +36,9 @@ AUI().use(
       function() {
         // Reset the original number of fields when "Reset" is pressed
         A.all('#jobForm .added').remove(true);
+
+        lastJobNumber = 1;
+        newJobNumber = 2;
       }
     );
   }

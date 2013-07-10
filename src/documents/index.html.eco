@@ -18,7 +18,10 @@ layout: default
 <div class="quote">
   <div class="container">
     <blockquote>
-      <p>"When AlloyUI arrived on the scene, it added a new dimension to YUI contributorship. Professional, robust, and beautifully designed, the Alloy project and its engineers created a world of new options for YUI implementers, and it helped the YUI project turn the corner to become a contributor-driven, community-owned open source project." <span class="author">- Eric Miraglia, Product Manager, Google Inc.</span>
+      <p>
+        "When AlloyUI arrived on the scene, it added a new dimension to YUI contributorship. Professional, robust, and beautifully designed, the Alloy project and its engineers created a world of new options for YUI implementers, and it helped the YUI project turn the corner to become a contributor-driven, community-owned open source project."
+        <br>
+        <span class="author">&mdash; Eric Miraglia, Product Manager, Google Inc. &amp; Former YUI Manager</span>
       </p>
     </blockquote>
   </div>
@@ -40,15 +43,19 @@ layout: default
       </div>
       <div class="instructions span8">
         <p class="steps">1 - Copy and paste</p>
-        <p class="description">First load the seed file, if you haven't yet.</p>
-        <pre><code>&lt;script src="<%= @getCdnSeed() %>"&gt;&lt;/script&gt;</code></pre>
+        <p class="description">First load the seed and CSS files.</p>
+        <pre><code>&lt;script src="<%= @getCdnSeed() %>"&gt;&lt;/script&gt;
+&lt;link href="<%= @getCdnPath() %>/aui-skin-classic/css/aui-skin-classic-all-min.css" rel="stylesheet"&gt;</code></pre>
       </div>
       <div class="instructions span8">
         <p class="steps">2 - Start using Alloy UI</p>
         <p class="description">Then initialize AlloyUI and load a module, e.g., AutoComplete.</p>
-        <pre><code>AUI().use('aui-autocomplete', function(A) {
-  // code goes here
-});</code></pre>
+        <pre><code>AUI().use(
+  'aui-autocomplete',
+  function(A) {
+    // code goes here
+  }
+);</code></pre>
         <p><a class="btn btn-link" href="<%= @getSiteUrl() %>/tutorials/" style="padding-left: 0;">Check the full tutorial &raquo;</a></p>
       </div>
     </div>

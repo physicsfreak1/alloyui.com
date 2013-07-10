@@ -18,7 +18,8 @@ AUI().use(
 
     // Empty button clears all boxes
     A.one('#empty').on(
-      'click', function() {
+      'click',
+      function() {
         holder.empty();
         holder.setStyle('position', 'static');
       }
@@ -26,7 +27,8 @@ AUI().use(
 
     // Toggle button hides and displays boxes
     A.one('#toggle').on(
-      'click', function() {
+      'click',
+      function() {
         var boxes = A.all('.mini');
         boxes.toggle();
       }

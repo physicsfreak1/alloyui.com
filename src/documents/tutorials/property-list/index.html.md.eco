@@ -8,10 +8,11 @@ description: Allows users to view and change properties from JavaScript objects.
 
 #### Getting Started
 
-First load the seed file if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Property List module.
@@ -31,7 +32,7 @@ AUI().use(
 Create an HTML element:
 
 ``` html
-<div class="yui-skin-sam" id="myPropertyList"></div>
+<div class="yui3-skin-sam" id="myPropertyList"></div>
 ```
 
 <div class="alert alert-info">
@@ -57,7 +58,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }
@@ -81,7 +82,7 @@ AUI().use(
         editor: new A.CheckboxCellEditor(
           {
             editable: true,
-            options: [ 'True' ]
+            options: ['True']
           }
         ),
         name: 'Boolean',
@@ -91,7 +92,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }
@@ -109,7 +110,7 @@ AUI().use(
         editor: new A.CheckboxCellEditor(
           {
             editable: true,
-            options: [ 'True' ]
+            options: ['True']
           }
         ),
         name: 'Boolean',
@@ -124,7 +125,7 @@ AUI().use(
         editor: new A.RadioCellEditor(
           {
             editable: true,
-            options: [ 'Yes', 'No' ]
+            options: ['Yes', 'No']
           }
         ),
         name: 'Radio',
@@ -155,7 +156,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }

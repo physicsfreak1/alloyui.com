@@ -8,10 +8,11 @@ description: Provides a set of controls to navigate through paged data.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Paginator module.
@@ -129,11 +130,15 @@ These actions can take place within `changeRequest`, utilizing `event.state.page
 
 Here is a very basic example of how a paginator may be used to change the content of a page.
 
+``` html
+<div class="content"></div>
+```
+
 ``` javascript
 AUI().use(
   'aui-paginator',
   function(A) {
-    //grabbing a node to be used for content
+    // Grabbing a node to be used for content
     var content = A.one('.content');
 
     new A.Paginator(
@@ -145,7 +150,7 @@ AUI().use(
 
             this.setState(newState);
 
-            //setting the content of the node to the current page number
+            // Setting the content of the node to the current page number
             content.html(event.state.page);
           }
         },

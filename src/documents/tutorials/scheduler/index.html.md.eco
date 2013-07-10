@@ -8,10 +8,11 @@ description: Allows user to access scheduler widget with built-in calendar.
 
 #### Getting Started
 
-First load the seed file if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Scheduler module.
@@ -39,7 +40,7 @@ Create an HTML element with a wrapper div:
   <strong>Note:</strong> using Scheduler without a "wrapper" `div` may produce undesirable results due to its styling within AlloyUI.  Try it with or without a wrapper to see how Scheduler works with surrounding elements.
 </div>
 
-Now create a new instance of Scheduler component.
+Now create a new instance of the Scheduler component.
 
 First, let's create an `events` variable where we stored our first calendar event, setting its name via `content` and a start and end date. Then we'll initialize the calendar view we're going to use, `weekView`.
 
@@ -96,7 +97,6 @@ AUI().use(
       }
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -108,7 +108,7 @@ AUI().use(
         date: new Date(2013, 4, 25),
         items: events,
         render: true,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }
@@ -129,7 +129,6 @@ AUI().use(
       }
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -138,13 +137,13 @@ AUI().use(
 
     new A.Scheduler(
       {
+        activeView: weekView,
         boundingBox: '#myScheduler',
         date: new Date(2013, 4, 25),
         eventRecorder: eventRecorder,
         items: events,
         render: true,
-        activeView: weekView,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }
@@ -165,7 +164,7 @@ AUI().use(
         startDate: new Date(2013, 4, 25, 1)
       },
       {
-        color: "#8d8",
+        color: "#8D8",
         content: 'Earth Day Lunch',
         disabled: true,
         endDate: new Date(2013, 4, 22, 13),
@@ -177,10 +176,9 @@ AUI().use(
         content: "Weeklong",
         endDate: new Date(2013, 4, 21),
         startDate: new Date(2013, 4, 27)
-      },
+      }
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -195,7 +193,7 @@ AUI().use(
         eventRecorder: eventRecorder,
         items: events,
         render: true,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }

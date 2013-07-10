@@ -8,10 +8,11 @@ description: Allows users to view loading progress in real time.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Progress Bar module.
@@ -37,13 +38,13 @@ Create a HTML element:
 </div>
 ```
 
-Now create a new instance of Progress Bar component, then tell to `boundingBox` where it's going to be attached and `contentBox` where to render the Progress Bar.  We'll set the initial `value` of Progress Bar to `0`. Next, let's render it.  Finally, we need to attach the onClick event to our load button, where Progress Bar's `value` will be set to `100`.
+Now create a new instance of the Progress Bar component, then tell to `boundingBox` where it's going to be attached and `contentBox` where to render the Progress Bar.  We'll set the initial `value` of Progress Bar to `0`. Next, let's render it.  Finally, we need to attach the onClick event to our load button, where Progress Bar's `value` will be set to `100`.
 
 ``` javascript
 AUI().use(
   'aui-progressbar',
   function(A) {
-    new A.ProgressBar(
+    var progressBar = new A.ProgressBar(
       {
         boundingBox: '#myProgressBar',
         contentBox: '.bar',
@@ -69,12 +70,17 @@ There are some other options that you can pass to your Progress Bar instance.
 
 If you need to have Progress Bar load content from another file, you can set a callback function when the `complete` event fires that loads your content.  Be sure to tell AUI to use the Node-Load component as well.  You can even set a `label` which is changed when the `complete` event fires.
 
+``` html
+<div class="content"></div>
+```
+
 ``` javascript
 AUI().use(
   'aui-progressbar',
   'node-load',
   function(A) {
-    new A.ProgressBar(
+    var content = A.one('.content');
+    var progressBar = new A.ProgressBar(
       {
         boundingBox: '#myProgressBar',
         contentBox: '.bar',
@@ -83,7 +89,7 @@ AUI().use(
         on: {
           complete: function(event) {
             this.set('label', 'Complete!');
-            content.load('assets/content.html');
+            content.load('<%= @getSiteUrl() %>/progress-bar/content.html');
           }
         }
       }
@@ -115,7 +121,8 @@ AUI().use(
   'node-load',
   'async-queue',
   function(A) {
-    new A.ProgressBar(
+    var content = A.one('.content');
+    var progressBar = new A.ProgressBar(
       {
         boundingBox: '#myProgressBar',
         contentBox: '.bar',
@@ -123,7 +130,7 @@ AUI().use(
         on: {
           complete: function(event) {
             this.set('label', 'Complete!');
-            content.load('assets/content.html');
+            content.load('<%= @getSiteUrl() %>/progress-bar/content.html');
           }
         },
         value: '0'

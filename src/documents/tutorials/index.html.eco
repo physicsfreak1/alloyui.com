@@ -38,27 +38,21 @@ layout: default
 
     <p>This is an ultra-small bit of JavaScript that enables you to load any AlloyUI component on your page.</p>
 
+    <pre><code class="html">&lt;link href="<%= @getCdnPath() %>/aui-skin-classic/css/aui-skin-classic-all-min.css" rel="stylesheet"&gt;</code></pre>
+
+    <p>And this is the base style for all components. Feel free to add your own CSS styles on top of this.</p>
+
     <hr>
 
     <h4>2. Getting started!</h4>
 
     <p>Let's create an AUI instance and do some simple stuff, like capturing a DOM element and attaching a click event to it. Then let's run some transitions!</p>
 
-    <pre><code>AUI().use(
-  'node',
-  'transition',
-  function (A) {
-    A.one('.btn').on(
-      'click', function() {
-        this.transition(
-          {
-            width: '500px'
-          }
-        );
-      }
-    );
-  }
-);</code></pre>
+    <%- @codeFile('../../files/website/js/tutorial-demo1.js', 'javascript') %>
+
+    <script>
+      <%- @readFile('../../files/website/js/tutorial-demo1.js', 'javascript') %>
+    </script>
 
     <div style="text-align: center;">
       <button id="try-btn" class="btn btn-large btn-block btn-primary" type="button">Try me now!</button>
@@ -68,19 +62,13 @@ layout: default
 
     <h4>3. Using a UI component</h4>
 
-    <p>Now let's take advantage of all the power that AlloyUI has and use one the UI components.</p>
+    <p>Now let's take advantage of all the power that AlloyUI has and use one of the UI components.</p>
 
-    <pre><code class="javascript">AUI().ready(
-  'aui-tooltip',
-  function(A) {
-    var tooltip = new A.Tooltip(
-      {
-        bodyContent: '<iframe width="500" height="280" src="http://www.youtube.com/embed/KzorZ1CO6Vs" frameborder="0" allowfullscreen></iframe>',
-        trigger: '#tooltip'
-      }
-    ).render();
-  }
-);</code></pre>
+    <%- @codeFile('../../files/website/js/tutorial-demo2.js', 'javascript') %>
+
+    <script>
+      <%- @readFile('../../files/website/js/tutorial-demo2.js', 'javascript') %>
+    </script>
 
     <p style="text-align: center; font-size: 16px; font-weight: bold;"><a href="#" id="tooltip">Hover for a simple tooltip</a></p>
 
@@ -97,5 +85,3 @@ layout: default
   </div>
 
 </div>
-
-<script src="<%= @getAssetsUrl() %>/js/tutorial-demo.js"></script>

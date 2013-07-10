@@ -8,10 +8,11 @@ description: Provides an interactive way of cycling through elements.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Carousel module.
@@ -40,7 +41,7 @@ Create a list of elements that contains the images you want to show:
 </div>
 ```
 
-Now create a new instance of Carousel component, then tell to `contentBox` where it's going to be attached and define some `width` and `height`. Finally, let's render it!
+Now create a new instance of the Carousel component, then tell to `contentBox` where it's going to be attached and define some `width` and `height`. Finally, let's render it!
 
 ``` javascript
 AUI().ready(

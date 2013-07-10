@@ -9,11 +9,11 @@ AUI().use('jsonp', 'node',function (A) {
 
     var contributorsHTML = '';
 
-    for( var i = 0; i < response.data.length; i++ ) {
+    for (var i = 0; i < response.data.length; i++) {
       contributorsHTML += A.Lang.sub(template, response.data[i]);
     }
 
-    A.one("#contributors").setHTML(contributorsHTML);
+    A.one("#contributors").setContent(contributorsHTML);
 
   }
 

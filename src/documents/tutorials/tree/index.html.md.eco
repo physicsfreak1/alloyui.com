@@ -8,10 +8,11 @@ description: Allows users to view file/folder structure in expandable tree view.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Tree View module.
@@ -34,13 +35,13 @@ Create a HTML element:
 <div id="myTreeView"></div>
 ```
 
-Now create a new instance of Tree View component, then initialize a variable `children` which will store an array of the child files and folders to be supplied to Tree View.  Then use the `new TreeView` constructor, passing our HTML element for `boundingBox` and our children variable for `children`. Finally, let's render it!
+Now create a new instance of the Tree View component, then initialize a variable `children` which will store an array of the child files and folders to be supplied to Tree View.  Then use the `new TreeView` constructor, passing our HTML element for `boundingBox` and our children variable for `children`. Finally, let's render it!
 
 ``` javascript
 AUI().use(
   'aui-tree-view',
   function(A) {
-    var children =  [
+    var children = [
       {
         label: 'ROOT',
         children: [
@@ -95,11 +96,11 @@ AUI().use(
       {
         cache: true,
         id: 'root',
-        io: 'assets/content.html'
+        io: 'content.html',
         label: 'ROOT',
         type: 'io'
       }
-    ]
+    ];
 
     new A.TreeView(
       {
@@ -121,7 +122,7 @@ AUI().use(
       {
         cache: true,
         id: 'root',
-        io: 'assets/content.html',
+        io: 'content.html',
         label: 'ROOT',
         type: 'io'
       }
@@ -135,6 +136,7 @@ AUI().use(
     ).render();
 
     var ROOT = treeView.getNodeById('root');
+
     var radioButton = ROOT.createNode(
       {
         id: 'radioButton',
