@@ -96,7 +96,6 @@ AUI().use(
       }
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -108,7 +107,7 @@ AUI().use(
         date: new Date(2013, 4, 25),
         items: events,
         render: true,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }
@@ -129,7 +128,6 @@ AUI().use(
       }
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -144,7 +142,7 @@ AUI().use(
         items: events,
         render: true,
         activeView: weekView,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }
@@ -180,7 +178,6 @@ AUI().use(
       },
     ];
 
-    var agendaView = new A.SchedulerAgendaView();
     var dayView = new A.SchedulerDayView();
     var weekView = new A.SchedulerWeekView();
     var monthView = new A.SchedulerMonthView();
@@ -195,7 +192,7 @@ AUI().use(
         eventRecorder: eventRecorder,
         items: events,
         render: true,
-        views: [dayView, weekView, monthView, agendaView]
+        views: [dayView, weekView, monthView]
       }
     );
   }

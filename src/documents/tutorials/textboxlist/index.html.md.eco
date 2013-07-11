@@ -44,7 +44,11 @@ AUI().use(
     var textboxlist = new A.TextboxList(
       {
         contentBox: '#myList',
-        dataSource: ['America', 'Europe', 'Asia']
+        dataSource: [
+          ['America'],
+          ['Europe'],
+          ['Asia']
+        ]
       }
     ).render();
   }
@@ -71,7 +75,11 @@ AUI().use(
     var textboxlist = new A.TextboxList(
       {
         contentBox: '#myList',
-        dataSource: ['America', 'Europe', 'Asia'],
+        dataSource: [
+          ['America'],
+          ['Europe'],
+          ['Asia']
+        ],
         typeAhead: true
       }
     ).render();

@@ -13,7 +13,7 @@ AUI().use('jsonp', 'node',function (A) {
       contributorsHTML += A.Lang.sub(template, response.data[i]);
     }
 
-    A.one("#contributors").setHTML(contributorsHTML);
+    A.one("#contributors").setContent(contributorsHTML);
 
   }
 
