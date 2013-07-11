@@ -31,7 +31,7 @@ AUI().use(
 Create an HTML element:
 
 ``` html
-<div class="yui-skin-sam" id="myPropertyList"></div>
+<div class="yui3-skin-sam" id="myPropertyList"></div>
 ```
 
 <div class="alert alert-info">
@@ -57,7 +57,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }
@@ -91,7 +91,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }
@@ -155,7 +155,7 @@ AUI().use(
 
     new A.PropertyList(
       {
-        data: properties
+        recordset: properties
       }
     ).render('#myPropertyList');
   }

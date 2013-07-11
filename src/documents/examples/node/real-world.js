@@ -30,6 +30,9 @@ AUI().use(
       function() {
         // Reset the original number of fields when "Reset" is pressed
         A.all('#jobForm .added').remove(true);
+
+        lastJobNumber = 1;
+        newJobNumber = 2;
       }
     );
   }
