@@ -19,7 +19,7 @@ AUI().ready(
           on: {
             complete: function(e) {
               this.set('label', 'Complete!');
-              content.load('assets/content.html');
+              content.load('http://alloyui.com/progress-bar/content.html');
               statusBar.addClass('complete');
             }
           },

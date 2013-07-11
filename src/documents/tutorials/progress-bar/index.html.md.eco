@@ -83,7 +83,7 @@ AUI().use(
         on: {
           complete: function(event) {
             this.set('label', 'Complete!');
-            content.load('assets/content.html');
+            content.load('<%= @getSiteUrl() %>/progress-bar/content.html');
           }
         }
       }
@@ -123,7 +123,7 @@ AUI().use(
         on: {
           complete: function(event) {
             this.set('label', 'Complete!');
-            content.load('assets/content.html');
+            content.load('<%= @getSiteUrl() %>/progress-bar/content.html');
           }
         },
         value: '0'

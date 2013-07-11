@@ -95,7 +95,7 @@ AUI().use(
       {
         cache: true,
         id: 'root',
-        io: 'assets/content.html'
+        io: 'content.html',
         label: 'ROOT',
         type: 'io'
       }
@@ -121,7 +121,7 @@ AUI().use(
       {
         cache: true,
         id: 'root',
-        io: 'assets/content.html',
+        io: 'content.html',
         label: 'ROOT',
         type: 'io'
       }
