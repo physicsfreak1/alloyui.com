@@ -38,6 +38,10 @@ layout: default
 
     <p>This is an ultra-small bit of JavaScript that enables you to load any AlloyUI component on your page.</p>
 
+    <pre><code class="html">&lt;link href="<%= @getCdnPath() %>/aui-skin-classic/css/aui-skin-classic-all-min.css" rel="stylesheet"&gt;</code></pre>
+
+    <p>And this is the base style for all components. Feel free to add your own CSS styles on top of this.</p>
+
     <hr>
 
     <h4>2. Getting started!</h4>

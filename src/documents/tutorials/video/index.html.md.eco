@@ -8,10 +8,11 @@ description: Creates an interactive HTML5 video player with fallback Flash video
 
 #### Getting Started
 
-First load the seed file if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Video module.

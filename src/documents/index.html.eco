@@ -40,8 +40,9 @@ layout: default
       </div>
       <div class="instructions span8">
         <p class="steps">1 - Copy and paste</p>
-        <p class="description">First load the seed file, if you haven't yet.</p>
-        <pre><code>&lt;script src="<%= @getCdnSeed() %>"&gt;&lt;/script&gt;</code></pre>
+        <p class="description">First load the seed and CSS files.</p>
+        <pre><code>&lt;script src="<%= @getCdnSeed() %>"&gt;&lt;/script&gt;
+&lt;link href="<%= @getCdnPath() %>/aui-skin-classic/css/aui-skin-classic-all-min.css" rel="stylesheet"&gt;</code></pre>
       </div>
       <div class="instructions span8">
         <p class="steps">2 - Start using Alloy UI</p>

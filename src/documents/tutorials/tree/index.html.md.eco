@@ -8,10 +8,11 @@ description: Allows users to view file/folder structure in expandable tree view.
 
 #### Getting Started
 
-First load the seed file, if you haven't yet.
+First load the seed and CSS files, if you haven't yet.
 
 ``` html
 <script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
 ```
 
 Then initialize AlloyUI and load the Tree View module.

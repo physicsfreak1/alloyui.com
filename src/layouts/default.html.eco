@@ -20,7 +20,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="<%= @getAssetsUrl() %>/img/favicon.ico">
 
   <!-- CSS: AlloyUI -->
-  <link href="<%= @getCdnPath() %>/aui-skin-classic/css/aui-skin-classic-all-min.css" rel="stylesheet">
+  <link href="<%= @getCdnCss() %>" rel="stylesheet">
 
   <!-- CSS: Bootstrap -->
   <link href="<%= @getAssetsUrl() %>/css/bootstrap.css" rel="stylesheet">
