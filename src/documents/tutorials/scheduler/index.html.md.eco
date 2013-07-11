@@ -138,12 +138,12 @@ AUI().use(
 
     new A.Scheduler(
       {
+        activeView: weekView,
         boundingBox: '#myScheduler',
         date: new Date(2013, 4, 25),
         eventRecorder: eventRecorder,
         items: events,
         render: true,
-        activeView: weekView,
         views: [dayView, weekView, monthView, agendaView]
       }
     );
@@ -165,7 +165,7 @@ AUI().use(
         startDate: new Date(2013, 4, 25, 1)
       },
       {
-        color: "#8d8",
+        color: "#8D8",
         content: 'Earth Day Lunch',
         disabled: true,
         endDate: new Date(2013, 4, 22, 13),
@@ -177,7 +177,7 @@ AUI().use(
         content: "Weeklong",
         endDate: new Date(2013, 4, 21),
         startDate: new Date(2013, 4, 27)
-      },
+      }
     ];
 
     var agendaView = new A.SchedulerAgendaView();

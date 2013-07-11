@@ -23,13 +23,15 @@ AUI().ready(
 
             var rowsPerPage = newState.rowsPerPage;
 
-            items.each(function(item, index, collection) {
-              item.set('className', 'item');
+            items.each(
+              function(item, index, collection) {
+                item.set('className', 'item');
 
-              var itemOnPage = Math.floor((index) / rowsPerPage) + 1;
+                var itemOnPage = Math.floor((index) / rowsPerPage) + 1;
 
-              item.addClass('page' + itemOnPage);
-            });
+                item.addClass('page' + itemOnPage);
+              }
+            );
 
             A.all('.page' + currentPage).setStyle('display', 'block');
           }

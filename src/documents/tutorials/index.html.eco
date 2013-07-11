@@ -68,7 +68,7 @@ layout: default
 
     <h4>3. Using a UI component</h4>
 
-    <p>Now let's take advantage of all the power that AlloyUI has and use one the UI components.</p>
+    <p>Now let's take advantage of all the power that AlloyUI has and use one of the UI components.</p>
 
     <pre><code class="javascript">AUI().ready(
   'aui-tooltip',

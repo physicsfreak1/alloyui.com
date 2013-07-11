@@ -67,7 +67,7 @@ The basic structure of the project is given in the following way:
 |   |-- files/
 |   |-- layouts/
 |-- build.xml
-|-- docpad.coffee
+|-- docpad.js
 |-- package.json
 </pre>
 
@@ -95,7 +95,7 @@ Contains some templates that are used in the application.
 
 Defines tasks for common steps.
 
-### [docpad.coffee](https://github.com/liferay/alloyui.com/blob/master/docpad.coffee)
+### [docpad.js](https://github.com/liferay/alloyui.com/blob/master/docpad.js)
 
 Stores most settings of the application.
 

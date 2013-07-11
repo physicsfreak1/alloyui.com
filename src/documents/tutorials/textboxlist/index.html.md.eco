@@ -93,7 +93,7 @@ AUI().use(
   function(A) {
     var textboxlist = new A.TextboxList(
       {
-        contentBox: '#myList'
+        contentBox: '#myList',
         dataSource: states,
         matchKey: 'name',
         schema: {

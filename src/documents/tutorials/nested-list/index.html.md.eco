@@ -17,7 +17,7 @@ First load the seed file, if you haven't yet.
 Then initialize AlloyUI and load the Nested List module.
 
 ``` javascript
-AUI().use(
+AUI().ready(
   'aui-nested-list',
   function(A) {
     // code goes here
@@ -63,7 +63,7 @@ AUI().ready(
           return true;
         },
         dropOn: 'myList',
-        nodes: '#myList li',
+        nodes: '#myList li'
       }
     );
   }

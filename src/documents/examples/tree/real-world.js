@@ -2,7 +2,7 @@ AUI().use(
   'aui-tree-view',
   function(A) {
     // Define our real world example
-    var RealWorldExample = {
+    var realWorldExample = {
       init: function() {
         var myTreeView = A.one('#myTreeView');
         var loadingmask = this.createLoadingMask(myTreeView);
@@ -97,10 +97,10 @@ AUI().use(
         );
 
         return treeView;
-      },
+      }
     };
 
     // Run our real world example
-    RealWorldExample.init();
+    realWorldExample.init();
   }
 );

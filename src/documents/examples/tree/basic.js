@@ -1,7 +1,7 @@
 AUI().use(
   'aui-tree-view',
   function(A) {
-    // // Create an array object for the tree root and child nodes
+    // Create an array object for the tree root and child nodes
     var children = [
       {
         children: [

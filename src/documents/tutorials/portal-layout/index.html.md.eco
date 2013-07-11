@@ -50,7 +50,7 @@ Now create a new instance of Portal Layout component by setting `dropNodes` to o
 AUI().use(
   'aui-portal-layout',
   function(A) {
-    var portalLayout = new A.PortalLayout(
+    new A.PortalLayout(
       {
         dragNodes: '.contentNode',
         dropNodes: '#myPortalLayout'
@@ -100,7 +100,7 @@ AUI().use(
     new A.PortalLayout(
       {
         dragNodes: '.contentNode',
-        dropContainer: '#dropContainer'
+        dropContainer: '#dropContainer',
         dropNodes: '#myPortalLayout',
         proxyNode: A.Node.create('<div class="proxyNode"></div>')
       }

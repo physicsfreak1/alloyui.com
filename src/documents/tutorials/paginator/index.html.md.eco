@@ -133,7 +133,7 @@ Here is a very basic example of how a paginator may be used to change the conten
 AUI().use(
   'aui-paginator',
   function(A) {
-    //grabbing a node to be used for content
+    // Grabbing a node to be used for content
     var content = A.one('.content');
 
     new A.Paginator(
@@ -145,7 +145,7 @@ AUI().use(
 
             this.setState(newState);
 
-            //setting the content of the node to the current page number
+            // Setting the content of the node to the current page number
             content.html(event.state.page);
           }
         },

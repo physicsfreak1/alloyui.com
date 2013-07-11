@@ -40,7 +40,7 @@ Now create a new instance of Tree View component, then initialize a variable `ch
 AUI().use(
   'aui-tree-view',
   function(A) {
-    var children =  [
+    var children = [
       {
         label: 'ROOT',
         children: [
@@ -99,7 +99,7 @@ AUI().use(
         label: 'ROOT',
         type: 'io'
       }
-    ]
+    ];
 
     new A.TreeView(
       {
@@ -135,6 +135,7 @@ AUI().use(
     ).render();
 
     var ROOT = treeView.getNodeById('root');
+
     var radioButton = ROOT.createNode(
       {
         id: 'radioButton',

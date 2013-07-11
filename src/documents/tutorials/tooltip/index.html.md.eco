@@ -17,7 +17,7 @@ First load the seed file, if you haven't yet.
 Then initialize AlloyUI and load the AutoComplete module.
 
 ``` javascript
-AUI().use(
+AUI().ready(
   'aui-tooltip',
   function(A) {
     // code goes here

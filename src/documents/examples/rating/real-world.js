@@ -19,6 +19,7 @@ AUI().use(
         instance = event.target;
         title = instance.get('title');
         stars = instance.get('value');
+        
         if (!title) {
           titleBox.set('innerHTML', 'You selected <strong>0 stars</strong> - no rating!');
         }

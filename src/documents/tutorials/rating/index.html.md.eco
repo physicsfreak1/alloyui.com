@@ -120,8 +120,10 @@ AUI().use(
         after: {
           itemSelect: function(event) {
             var title = this.get('title');
+
             var stars = this.get('value') + 1;
             stars += ' Stars';
+
             A.one('#print').set('innerHTML', 'You selected ' + title + ' - ' + stars);
           }
         },
