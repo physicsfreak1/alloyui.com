@@ -69,6 +69,10 @@ There are some other options that you can pass to your Progress Bar instance.
 
 If you need to have Progress Bar load content from another file, you can set a callback function when the `complete` event fires that loads your content.  Be sure to tell AUI to use the Node-Load component as well.  You can even set a `label` which is changed when the `complete` event fires.
 
+``` html
+<div class="content"></div>
+```
+
 ``` javascript
 AUI().use(
   'aui-progressbar',

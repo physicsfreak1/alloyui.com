@@ -129,6 +129,10 @@ These actions can take place within `changeRequest`, utilizing `event.state.page
 
 Here is a very basic example of how a paginator may be used to change the content of a page.
 
+``` html
+<div class="content"></div>
+```
+
 ``` javascript
 AUI().use(
   'aui-paginator',
