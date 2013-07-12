@@ -1,0 +1,127 @@
+---
+layout: single-doc
+title: Editor
+tags: 'editor'
+category: Editor
+description: Provides a what-you-see-is-what-you-get editor for text and graphics.
+---
+
+#### Getting Started
+
+First load the seed and CSS files, if you haven't yet.
+
+``` html
+<script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
+```
+
+Then initialize AlloyUI and load the Editor module.
+
+``` javascript
+AUI().ready(
+  'aui-editor',
+  function (A) {
+    // code goes here
+  }
+);
+```
+
+---
+
+#### Using Editor
+
+Create an HTML element to house your Editor and enclose it in a wrapper `div`.
+
+``` html
+<div id="wrapper">
+  <div id="myEditor"></div>
+</div>
+```
+
+Then initialize a new instance of Editor and render it by passsing your element to the `render()` method.
+
+``` javascript
+AUI().ready(
+  'aui-editor',
+  function(A) {
+    new A.Editor().render('#myEditor');
+  }
+);
+```
+
+And that's it! That's all the code you'll have to write to use a basic Editor module.
+
+---
+
+#### Configuring Editor
+
+By default, the editor comes with a toolbar with several button groups. You can add a group of buttons by passing to your editor a `toolbarConfig` object that contains an array named `append`. This array should contain an `index` that determines the position of your new button group on the toolbar, as well as an array of buttons to `include`.
+
+``` javascript
+AUI().ready(
+  'aui-editor',
+  function(A) {
+    new A.Editor(
+      {
+        toolbarConfig: {
+          append: [
+            {
+              index: 3,
+              type: 'subscript',
+              include: ['subscript', 'superscript']
+            }
+          ]
+        }
+      }
+    ).render('#myEditor');
+  }
+);
+```
+
+Using similar configuration options, you can also create a button that, when clicked, brings up a list of predetermined formatting options that the user can select. See the real world example for more details.
+
+You can give your editor predetermined content by passing in a string of HTML code called `content`.
+
+``` javascript
+AUI().ready(
+  'aui-editor',
+  function(A) {
+    new A.Editor(
+      {
+        content: '<p><a href="http://alloyui.com" target="_blank">' +
+            '<img src="<%= @getSiteUrl() %>/editor/img/alloy-robot-suit.png" align="left"/>' +
+          '</a></p>' +
+          '<p>Test Content</p>'
+      }
+    ).render('#myEditor');
+  }
+);
+```
+Finally, you can change the type of code the editor displays when you click the source button by using `A.Plugin.EditorCreoleCode` or `A.Plugin.EditorBBCode`. You can also add your own custom CSS styles by using the `addCss()` method.
+
+``` javascript
+AUI().ready(
+  'aui-editor',
+  function(A) {
+
+    var editor = new A.Editor(
+      {
+        content: '<p><a href="http://alloyui.com" target="_blank">' +
+            '<img src="<%= @getSiteUrl() %>/editor/img/alloy-robot-suit.png" align="left"/>' +
+          '</a></p>' +
+          '<p>Test Content</p>'
+      }
+    );
+
+    editor.render('#myEditor');
+
+    editor.plug(A.Plugin.EditorCreoleCode);
+
+    editor.addCss('<%= @getSiteUrl() %>/editor/css/basic.css');
+  }
+);
+```
+
+<div class="alert alert-success">
+  For more information about configuration, check out our <a href="<%= @getSiteUrl() %>/api/">API Docs</a>.
+</div>
