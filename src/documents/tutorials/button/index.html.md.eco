@@ -44,7 +44,7 @@ The other way is through JavaScript. First, define an HTML tag.
 <button id="myButton"></button>
 ```
 
-Now create a new instance of Button component by setting `srcNode` to our HTML element's selector. Also, we should include a `label` to populate the button. Finally, let's render it!
+Now create a new instance of the Button component by setting `srcNode` to our HTML element's selector. Also, we should include a `label` to populate the button. Finally, let's render it!
 
 ``` javascript
 YUI().use(

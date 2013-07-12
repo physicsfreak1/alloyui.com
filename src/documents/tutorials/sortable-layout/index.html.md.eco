@@ -46,7 +46,7 @@ Create an HTML element with some content nodes:
 </div>
 ```
 
-Now create a new instance of Sortable Layout component by setting `dropNodes` to our HTML element's selector. Also, set `dragNodes` to the content nodes' class so Sortable Layout can make the nodes draggable.
+Now create a new instance of the Sortable Layout component by setting `dropNodes` to our HTML element's selector. Also, set `dragNodes` to the content nodes' class so Sortable Layout can make the nodes draggable.
 
 ``` javascript
 YUI().use(

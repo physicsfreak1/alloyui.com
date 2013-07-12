@@ -36,7 +36,7 @@ Create a HTML element:
 <div id="myProgressBar"></div>
 ```
 
-Now create a new instance of Progress Bar component, then tell to `boundingBox` where it's going to be attached.  We'll set the initial `value` of Progress Bar to `70`. Next, let's render it.
+Now create a new instance of the Progress Bar component, then tell to `boundingBox` where it's going to be attached.  We'll set the initial `value` of Progress Bar to `70`. Next, let's render it.
 
 ``` javascript
 YUI().use(
@@ -82,7 +82,7 @@ YUI().use(
 );
 ```
 
-Also you can define a vertical Progress Bar, to do that just set `orientation` to `vertical`.
+Also you can define a vertical Progress Bar; to do that just set `orientation` to `vertical`.
 
 ``` javascript
 YUI().use(
