@@ -131,7 +131,8 @@ YUI().use(
         },
         boundingBox: '#myRating',
         showTitle: true
-    }).render();
+      }
+    ).render();
   }
 );
 ```

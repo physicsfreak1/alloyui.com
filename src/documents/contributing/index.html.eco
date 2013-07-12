@@ -68,13 +68,15 @@ layout: default
     </ol>
     <p>For example:</p>
 
-    <pre><code class="javascript">new Y.Carousel({
+    <pre><code class="javascript">new Y.Carousel(
+  {
     contentBox: '#demo', // 1. DOM manipulation
     activeIndex: 'rand', // 2. Specific module logics in alphabetical order
     intervalTime: 2, // 2. Specific module logics in alphabetical order
     width: 700, // 3. Style configurations
     height: 250 // 3. Style configurations
-}).render();</code></pre>
+  }
+).render();</code></pre>
 
   </div>
 </div>

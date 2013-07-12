@@ -12,7 +12,7 @@ YUI().use(
       }
     );
 
-    //Create new constructor for Portlet adding widget
+    // Create new constructor for Portlet adding widget
     var PortletItem = function() {
       PortletItem.superclass.constructor.apply(this, arguments);
     };
@@ -36,7 +36,7 @@ YUI().use(
       }
     };
 
-    //Extend widget to clone itself when dragged
+    // Extend widget to clone itself when dragged
     var color = '';
     Y.extend(
       PortletItem,
@@ -54,7 +54,7 @@ YUI().use(
 
     var portletList = new PortletItem();
 
-    //Create new node which replaces clone and add drop plugin to new node
+    // Create new node which replaces clone and add drop plugin to new node
     var livePortlet;
     portletList.on(
       'drag:end',

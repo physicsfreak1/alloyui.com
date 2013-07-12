@@ -135,7 +135,7 @@ Here is a very basic example of how a pagination may be used to change the conte
 YUI().use(
   'aui-pagination',
   function(Y) {
-    //grabbing a node to be used for content
+    // Grabbing a node to be used for content
     var content = Y.one('.content');
 
     new Y.Pagination(
@@ -147,7 +147,7 @@ YUI().use(
 
             this.setState(newState);
 
-            //setting the content of the node to the current page number
+            // Setting the content of the node to the current page number
             content.html(event.state.page);
           }
         },
