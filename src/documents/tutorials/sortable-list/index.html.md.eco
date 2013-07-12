@@ -111,7 +111,7 @@ YUI().use(
           return true;
         },
         dropOn: 'myList',
-        nodes: '#myList li'
+        nodes: '#myList li ol li'
       }
     );
   }
