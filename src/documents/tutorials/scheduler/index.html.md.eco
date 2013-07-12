@@ -39,7 +39,7 @@ Create an HTML element with a wrapper div:
   <strong>Note:</strong> using Scheduler without a "wrapper" `div` may produce undesirable results due to its styling within AlloyUI.  Try it with or without a wrapper to see how Scheduler works with surrounding elements.
 </div>
 
-Now create a new instance of Scheduler component.
+Now create a new instance of the Scheduler component.
 
 First, let's create an `events` variable where we stored our first calendar event, setting its name via `content` and a start and end date. Then we'll initialize the calendar view we're going to use, `weekView`.
 

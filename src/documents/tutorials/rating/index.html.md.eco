@@ -34,7 +34,7 @@ Create an HTML element:
 <div id="myRating"></div>
 ```
 
-Now create a new instance of Rating component by setting boundingBox to our HTML element's selector. We will leave all other options empty for a stock Rating configuration. Finally, let's render it!
+Now create a new instance of the Rating component by setting boundingBox to our HTML element's selector. We will leave all other options empty for a stock Rating configuration. Finally, let's render it!
 
 ``` javascript
 AUI().use(

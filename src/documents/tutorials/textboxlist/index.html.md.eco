@@ -35,7 +35,7 @@ Create an HTML element:
 <div id="myList"></div>
 ```
 
-Now create a new instance of Textbox List component, then tell `contentBox` where it's going to be attached and populate some suggestions by adding a simple JavaScript array to `dataSource`. Finally, let's render it!
+Now create a new instance of the Textbox List component, then tell `contentBox` where it's going to be attached and populate some suggestions by adding a simple JavaScript array to `dataSource`. Finally, let's render it!
 
 ``` javascript
 AUI().use(

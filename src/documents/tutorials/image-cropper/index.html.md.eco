@@ -37,7 +37,7 @@ Create an HTML element with the desired crop image nested inside:
 </div>
 ```
 
-Now create a new instance of Image Cropper component by setting `srcNode` to our image element. Finally, let's render it!
+Now create a new instance of the Image Cropper component by setting `srcNode` to our image element. Finally, let's render it!
 
 ``` javascript
 AUI().use(

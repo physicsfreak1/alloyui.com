@@ -42,7 +42,7 @@ Create a HTML element with some content to toggle on/off:
   <strong>Note:</strong> the `aui-toggler` classes are optional, and tell AUI to place the content in `collapsed` state on load.<br>
 </div>
 
-Now create a new instance of Toggler component, then pass it the `container` where it's going to be attached and `header` and `content` where we placed our header and content html. Finally, let's render it!
+Now create a new instance of the Toggler component, then pass it the `container` where it's going to be attached and `header` and `content` where we placed our header and content html. Finally, let's render it!
 
 ``` javascript
 AUI().use(

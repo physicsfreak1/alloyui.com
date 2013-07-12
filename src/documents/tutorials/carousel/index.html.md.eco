@@ -40,7 +40,7 @@ Create a list of elements that contains the images you want to show:
 </div>
 ```
 
-Now create a new instance of Carousel component, then tell to `contentBox` where it's going to be attached and define some `width` and `height`. Finally, let's render it!
+Now create a new instance of the Carousel component, then tell to `contentBox` where it's going to be attached and define some `width` and `height`. Finally, let's render it!
 
 ``` javascript
 AUI().ready(

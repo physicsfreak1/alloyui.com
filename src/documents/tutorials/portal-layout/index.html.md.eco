@@ -44,7 +44,7 @@ Create an HTML element with some content nodes:
 </div>
 ```
 
-Now create a new instance of Portal Layout component by setting `dropNodes` to our HTML element's selector. Also, set `dragNodes` to the content nodes' class so Portal Layout can make the nodes draggable.
+Now create a new instance of the Portal Layout component by setting `dropNodes` to our HTML element's selector. Also, set `dragNodes` to the content nodes' class so Portal Layout can make the nodes draggable.
 
 ``` javascript
 AUI().use(
