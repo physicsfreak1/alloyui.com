@@ -1,0 +1,209 @@
+.red {
+  background-color: #F00;
+  text-align: center;
+}
+
+.green {
+  background-color: #080;
+}
+
+#myEditor {
+  border: 1px solid #CCC;
+  margin-top: 4px;
+}
+
+.aui-editortoolbar-select-fontname, .aui-editortoolbar-select-fontsize {
+  height: 24px;
+  margin: 0 3px 0 0;
+  padding: 0 2px;
+}
+
+.aui-editortoolbar-select-fontname {
+  width: 150px;
+}
+
+.aui-editortoolbar-select-fontsize {
+  width: 55px;
+}
+
+.aui-editormenu-content-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aui-editormenu-content-list li {
+  list-style: none;
+}
+
+.aui-editortoolbar-content .aui-toolbar-horizontal {
+  margin-right: 3px;
+}
+
+.aui-editormenu-hidden {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.aui-editortoolbar-source-textarea {
+  width: 100%;
+}
+
+.aui-editortoolbar-insertimage-content .aui-button-holder, .aui-editortoolbar-insertlink-content .aui-button-holder {
+  text-align: right;
+}
+
+.aui-editortoolbar-insertimage-content .aui-field-content, .aui-editortoolbar-insertlink-content .aui-field-content {
+  clear: both;
+}
+
+.aui-editortoolbar-align-node {
+  position: absolute;
+}
+
+.aui-editortoolbar-insertlink-content {
+  padding: 10px;
+}
+
+.aui-editormenu-content {
+  background-color: #FFF;
+}
+
+.aui-editormenu-content-text {
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #DDD;
+  padding: 3px;
+  margin-bottom: 1px;
+}
+
+.aui-editormenu-content-item {
+  border: 1px solid #EEE;
+  background-color: #EEE;
+  margin: 1px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.aui-editormenu-content-item: hover {
+  color: #06C;
+  border: 1px solid #316AC5;
+  background-color: #DFF1FF;
+}
+
+.aui-editortoolbar-content .aui-icon-styles {
+  background: url(../img/styles.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-forecolor {
+  background: url(../img/forecolor.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-backcolor {
+  background: url(../img/backcolor.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-bold {
+  background: url(../img/bold.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-italic {
+  background: url(../img/italic.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-underline {
+  background: url(../img/underline.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-strikethrough {
+  background: url(../img/strike.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-insertimage {
+  background: url(../img/image.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-insertlink {
+  background: url(../img/hyperlink.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-justifyleft {
+  background: url(../img/justify_left.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-justifycenter {
+  background: url(../img/justify_center.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-justifyright {
+  background: url(../img/justify_right.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-insertunorderedlist {
+  background: url(../img/unordered_list.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-insertorderedlist {
+  background: url(../img/ordered_list.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-indent {
+  background: url(../img/indent.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-outdent {
+  background: url(../img/outdent.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-format {
+  background: url(../img/format.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-source {
+  background: url(../img/source.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-insertimage-content .aui-icon-align-block {
+  background: url(../img/align_block.png) no-repeat;
+}
+
+.aui-editortoolbar-insertimage-content .aui-icon-align-left {
+  background: url(../img/align_left.png) no-repeat;
+}
+
+.aui-editortoolbar-insertimage-content .aui-icon-align-inline {
+  background: url(../img/align_inline.png) no-repeat;
+}
+
+.aui-editortoolbar-insertimage-content .aui-icon-align-right {
+  background: url(../img/align_right.png) no-repeat;
+}
+
+.aui-editortoolbar-content .aui-icon-quote {
+  background: url(../img/quote.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-superscript {
+  background: url(../img/superscript.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-content .aui-icon-subscript {
+  background: url(../img/subscript.png) no-repeat transparent;
+}
+
+.aui-editortoolbar-insertimage-content, .aui-editortoolbar-insertlink-content {
+  padding: 10px;
+}
+
+.aui-editortoolbar-insertimage-content .aui-field-numeric, .aui-editortoolbar-size-separator {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.aui-editortoolbar-insertimage-content .aui-field-numeric input, .aui-editortoolbar-size-separator {
+  width: 30px;
+}
+
+.aui-editortoolbar-size-separator {
+  text-align: center;
+}
