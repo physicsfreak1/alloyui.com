@@ -1,0 +1,47 @@
+div.#wrapper {
+  margin: 20px auto;
+}
+
+form.aui-form-content button.aui-buttonitem-content {
+  display: inline;
+  margin-bottom: 12px;
+}
+
+select[multiple] {
+  height: 100px;
+}
+
+input.aui-field-input, textarea.aui-field-input {
+  margin-bottom: 2px;
+}
+
+span.aui-field-content {
+  margin-bottom: 10px;
+}
+
+form.aui-form-content button:first-of-type {
+  margin-top: -18px;
+}
+
+span.aui-field-content label.aui-field-label {
+  width: 200px;
+}
+
+span.aui-field-content span.aui-field-hint {
+  margin-left: 214px;
+}
+
+input.aui-button-input-submit {
+  margin-top: -94px;
+  padding: 5px 9px 6px 8px;
+}
+
+form.aui-form-content button:nth-of-type(2) {
+  height: 31px;
+  margin: 20px 0 0 70px;
+  padding: 3px 5px 4px 4px;
+}
+
+form.aui-form-content button:nth-of-type(2) span.aui-buttonitem-label {
+  font-weight: bold;
+}

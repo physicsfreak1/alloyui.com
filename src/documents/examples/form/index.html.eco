@@ -1,0 +1,20 @@
+---
+title: Basic Example
+layout: single-example
+slug: 'form'
+tags: 'form'
+category: Form
+description: Allows you to create a form with text fields and selection menus.
+index: true
+---
+
+<link rel="stylesheet" href="<%= @getSiteUrl() %>/form/css/basic.css" />
+
+<%- @readFile('basic-markup.html', 'html') %>
+
+<%- @codeFile('basic-markup.html', 'html') %>
+<%- @codeFile('basic.js', 'javascript') %>
+
+<script>
+  <%- @readFile('basic.js', 'javascript') %>
+</script>
