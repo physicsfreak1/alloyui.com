@@ -1,0 +1,222 @@
+---
+layout: single-doc
+title: Form
+tags: 'form'
+category: Form
+description: Allows you to create a form with text fields and selection menus.
+---
+
+#### Getting Started
+
+First load the seed and CSS files, if you haven't yet.
+
+``` html
+<script src="<%= @getCdnSeed() %>"></script>
+<link href="<%= @getCdnCss() %>" rel="stylesheet">
+```
+
+Then initialize AlloyUI and load the Form module.
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function (A) {
+    // code goes here
+  }
+);
+```
+
+---
+
+#### Using Form
+
+Create an HTML element to house your Form and enclose it in a wrapper `div`.
+
+``` html
+<div id="wrapper">
+  <form id="myForm"></form>
+</div>
+```
+
+Then initialize a new instance of Form and render it by passsing your element to the `render()` method.
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function(A) {
+    var form = new A.Form().render('#myForm');
+  }
+);
+```
+
+When Form is first initialized, it contains no fields. Such elements must be added to the Form individually. Let's add two text fields using the `add()` method:
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function(A) {
+    var form = new A.Form().render('#myForm');
+
+    form.add(
+      [
+        {
+          labelText: 'Name:'
+        },
+        {
+          labelText: 'Create a Password:',
+          type: 'password'
+        }
+      ],
+      true
+    );
+  }
+);
+```
+
+You can also add fields to the form by declaring the content box of your Form as a variable. Create a new field and then use the `render` attribute of the field to specify that it should be rendered as part of the content box.
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function(A) {
+    var form = new A.Form().render('#myForm');
+
+    var formContentBox = form.get('contentBox');
+
+    var field = new A.Textfield(
+      {
+        labelText: 'Enter Text Here:',
+        render: formContentBox
+      }
+    );
+
+    form.add(field);
+  }
+);
+```
+
+Another way to create a Form is by creating an HTML `input` element for each field, and then using the `node` attribute of `A.Field()` to tie a newly created field to the proper HTML element.
+
+``` html
+<div id="wrapper">
+  <form id="myForm">
+    <input id="field">
+  </form>
+</div>
+```
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function(A) {
+    new A.Field(
+      {
+        labelText: 'Name:',
+        node: '#field'
+      }
+    ).render('#myForm');
+  }
+);
+```
+
+<div class="alert alert-info">
+  <strong>Note:</strong> Many other field types are available, please see example for other available types.
+</div>
+
+---
+
+#### Configuring Form
+
+Additional configuration options include displaying a hint next to a field, changing the alignment of the label text, giving a text area a minimum or maximum height, giving a field a predefined value, allowing the user to only type a certain set of characters, and creating a validator to check whether the value of a field matches a regular expression.
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  function(A) {
+    var form = new A.Form().render('#myForm');
+
+    var formContentBox = form.get('contentBox');
+
+    var field = new A.Textarea(
+      {
+        allowOnly: /[A-z]|\s|\n/,
+        autoSize: true,
+        fieldHint: 'Watch this field change size as you type.',
+        labelAlign: 'left',
+        labelText: 'Enter some text here (no numbers allowed):',
+        maxHeight: 160,
+        minHeight: 70,
+        render: formContentBox,
+        selectOnFocus: true,
+        value: 'Focus this field to highlight this text.',
+        validator: function(value) {
+          return /[A-z]|\s|\n/.test(value);
+        }
+      }
+    );
+
+    form.add(field);
+  }
+);
+```
+
+You can reset the form by using the `resetValues()` method. If you have created a validator, you can check if the value of a field is valid by using `isValid()`.
+
+``` javascript
+AUI().ready(
+  'aui-form',
+  'aui-button-item',
+  function(A) {
+    var form = new A.Form().render('#myForm');
+
+    var formContentBox = form.get('contentBox');
+
+    // Create a text field with a validator
+    var field = new A.Textfield(
+      {
+        labelText: '2 + 2 =',
+        render: formContentBox,
+        validator: function(value) {
+          return (value === '4');
+        }
+      }
+    );
+
+    // Create a button so the user can check the answer
+    var check = new A.ButtonItem(
+      {
+        handler: function() {
+          if (field.isValid()) {
+            alert('Correct!');
+          }
+          else {
+            alert('Incorrect!');
+          }
+        },
+        label: 'Check Answer',
+        render: formContentBox
+      }
+    );
+
+    // Create a button that resets the form
+    var reset = new A.ButtonItem(
+      {
+        handler: function() {
+          form.resetValues();
+        },
+        label: 'Reset',
+        render: formContentBox
+      }
+    );
+
+    // Add these new fields to the form
+    form.add(field);
+    form.add(check);
+    form.add(reset);
+  }
+);
+```
+
+<div class="alert alert-success">
+  For more information about configuration, check out our <a href="<%= @getSiteUrl() %>/api/">API Docs</a>.
+</div>
