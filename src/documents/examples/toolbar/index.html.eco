@@ -1,0 +1,20 @@
+---
+title: Basic Example
+layout: single-example
+slug: 'toolbar'
+tags: 'toolbar'
+category: Toolbar
+description: Creates a horizontal or vertical set of buttons that contain icons and/or labels.
+index: true
+---
+
+<link rel="stylesheet" href="<%= @getSiteUrl() %>/toolbar/css/basic.css" />
+
+<%- @readFile('basic-markup.html', 'html') %>
+
+<%- @codeFile('basic-markup.html', 'html') %>
+<%- @codeFile('basic.js', 'javascript') %>
+
+<script>
+  <%- @readFile('basic.js', 'javascript') %>
+</script>
