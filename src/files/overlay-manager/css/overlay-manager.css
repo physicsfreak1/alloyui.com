@@ -1,0 +1,23 @@
+#overlay-blue .aui-overlay, #overlay-mixed .blue {
+	background: #08C;
+	color: #FFF;
+	border: 4px solid #000;
+}
+
+#overlay-red .aui-overlay, #overlay-mixed .red {
+	background: red;
+	color: #FFF;
+	border: 4px solid #000;
+}
+
+.github-ribbon {
+	z-index: 2501;
+}
+
+.overlay-boxes {
+	float: left;
+}
+
+.navbar {
+	z-index: 2500;
+}
