@@ -1,0 +1,24 @@
+---
+title: Real World Example
+layout: single-example
+slug: 'toolbar'
+tags: 'toolbar'
+category: Toolbar
+---
+
+<link rel="stylesheet" href="<%= @getSiteUrl() %>/toolbar/css/real-world.css" />
+
+<%- @readFile('basic-markup.html', 'html') %>
+
+<br>
+
+<div class="alert alert-info">
+  <strong>Note:</strong> Please see <a href="<%= @getSiteUrl() %>/examples/editor">Editor</a> for an example of a toolbar whose buttons control the display of text.
+</div>
+
+<%- @codeFile('basic-markup.html', 'html') %>
+<%- @codeFile('real-world.js', 'javascript') %>
+
+<script>
+  <%- @readFile('real-world.js', 'javascript') %>
+</script>

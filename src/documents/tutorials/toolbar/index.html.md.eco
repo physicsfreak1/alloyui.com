@@ -1,0 +1,144 @@
+---
+layout: single-doc
+title: Toolbar
+tags: 'toolbar'
+category: Toolbar
+description: Creates a horizontal or vertical set of buttons that contain icons and/or labels.
+---
+
+#### Getting Started
+
+First load the seed file, if you haven't yet.
+
+``` html
+<script src="<%= @getCdnSeed() %>"></script>
+```
+
+Then initialize AlloyUI and load the Toolbar module.
+
+``` javascript
+AUI().ready(
+  'aui-toolbar',
+  function(A) {
+    // code goes here
+  }
+);
+```
+
+---
+
+#### Using Toolbar
+
+Create an HTML element to contain your Toolbar.
+
+``` html
+<div id="myToolbar"></div>
+```
+
+Now create a new instance of the Toolbar component, then render it by passing your HTML element to the `render` method.
+
+``` javascript
+AUI().ready(
+  'aui-toolbar',
+  function(A) {
+    new A.Toolbar().render('#myToolbar');
+  }
+);
+```
+
+When Toolbar is first initialized, it contains no buttons. Buttons are created by passing an array called `children` to the Toolbar constructor.
+
+``` javascript
+AUI().ready(
+  'aui-toolbar',
+  function(A) {
+    new A.Toolbar(
+      {
+        children: [
+          {
+            label: 'Add'
+          },
+          {
+            label: 'Remove'
+          },
+          {
+            label: 'Config'
+          }
+        ]
+      }
+    ).render('#myToolbar');
+  }
+);
+```
+
+---
+
+#### Configuring Toolbar
+
+There are some other options that you can pass to your Toolbar instance.
+
+For example, the objects in the `children` array may have three attributes, `icon`, `label`, and `title`, all of which are optional. The `label` is the text that is displayed on the button itself, while the `title` is displayed when you mouse over the button.
+
+``` javascript
+AUI().ready(
+  'aui-toolbar',
+  function(A) {
+    new A.Toolbar(
+      {
+        children: [
+          {
+            icon: 'plus',
+            label: 'Add',
+            title: 'Add'
+          },
+          {
+            icon: 'minus',
+            label: 'Remove',
+            title: 'Delete'
+          },
+          {
+            icon: 'gear',
+            label: 'Config',
+            title: 'Configure'
+          }
+        ]
+      }
+    ).render('#myToolbar');
+  }
+);
+```
+
+<div class="alert alert-info">
+  <strong>Note:</strong> Many other icons are available; please see the real world example for some of the other available icons.
+</div>
+
+Finally, there are two other important attributes that can be passed to the Toolbar constructor. Setting `activeState` to `true` will change the appearance of a button when it is clicked and reset it when it is clicked again. Setting `orientation` to `'vertical'` will create a vertical toolbar.
+
+``` javascript
+AUI().ready(
+  'aui-toolbar',
+  function(A) {
+    new A.Toolbar(
+      {
+        activeState: true,
+        children: [
+          {
+            label: 'Add'
+          },
+          {
+            label: 'Remove'
+          },
+          {
+            label: 'Config'
+          }
+        ],
+        orientation: 'vertical'
+      }
+    ).render('#myToolbar');
+  }
+);
+```
+
+<div class="alert alert-success">
+  For more information about configuration, check out our <a href="<%= @getSiteUrl() %>/api/">API Docs</a>.
+</div>
