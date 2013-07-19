@@ -1,0 +1,73 @@
+#contextOverlay1 {
+  width: 300px;
+  border: 3px solid #000;
+  background: #FFF;
+  padding: 3px;
+  position: absolute;
+}
+
+.menu {
+  position: absolute;
+  width: 150px;
+  background: #FFF;
+  border-color: #DEDEDE #BFBFBF #BFBFBF #DEDEDE;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.menu ul, .menu li {
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #DEDEDE;
+  display: block;
+  padding: 2px;
+}
+
+.menu li a {
+  display: block;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: #369;
+}
+
+.menu li a:hover {
+  background: #CCC;
+}
+
+.menu-list span {
+  background: #CCC;
+  float: left;
+  font-size: 14px;
+  list-style: none;
+  margin-left: 5px;
+  padding: 4px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #369;
+}
+
+.extended-menus {
+  clear: both;
+  padding: 1em 0;
+}
+
+.extended-menus input {
+  float: left;
+}
+
+.disabled-trigger {
+  opacity: 0.5;
+  color: #333;
+}
+
+.span9 p:nth-of-type(1), .span9 p:nth-of-type(2) {
+  display: inline;
+}
+
+.menu-item-1 {
+  margin-top: 15px;
+}
